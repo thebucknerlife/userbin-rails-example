@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Rails &hearts; Userbin</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <style>
+    .jumbotron {
+      background-color: #fff;
+    }
+    .jumbotron .btn {
+      font-size: 21px;
+      padding: 14px 24px;
+    }
+    .dashboard {
+      padding: 40px 15px;
+      text-align: center;
+    }
+  </style>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Rails &hearts; Userbin</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if Userbin.user_logged_in? %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= Userbin.current_user.email %> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="ub-logout">Log out</a></li>
+                </ul>
+              </li>
+            <% else %>
+              <li><a href="#contact" class="ub-login">Log in</a></li>
+            <% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <%= yield %>
+
+  </body>
+</html>

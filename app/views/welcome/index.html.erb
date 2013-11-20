@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Rails &hearts; Userbin</h1>
+    <p class="lead">Yay, you've just launched a site where your users authenticates through Userbin.</p>
+    <% if Userbin.config.app_id.to_i > 0 %>
+      <p class="lead">We've added the class <code>ub-signup</code> to the button below and <code>ub-login</code> to the navbar. Now sign up to your new site and enter the protected area.</p>
+      <p><a class="btn btn-lg btn-success ub-signup" href="#" role="button">Sign up now</a></p>
+    <% else %>
+      <p class="lead">
+        Right now Userbin is running in demo mode.
+        <br>
+        Configure this app with your own app ID and secret:
+      </p>
+      <pre class="well text-left col-sm-6 col-sm-offset-3">
+  # ./config/initializers/userbin.rb
+  Userbin.configure do |config|
+    config.app_id = "YOUR_APP_ID"
+    config.api_secret = "YOUR_API_SECRET"
+  end
+      </pre>
+    <% end %>
+  </div>
+</div>
