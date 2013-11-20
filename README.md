@@ -28,6 +28,12 @@ Deploy to Heroku
     $ heroku addons:add userbin
     ```
 
+1. Setup database
+
+    ```bash
+    $ heroku run rake db:setup
+    ```
+
 1. Deploy
 
     ```bash
