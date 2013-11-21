@@ -46,6 +46,12 @@ Deploy to Heroku
     $ heroku open
     ```
 
+1. When you're done playing around, open the Userbin dashboard to configure your application, add social login and customize emails.
+
+    ```bash
+    heroku addons:open userbin
+    ```
+
 Check out the [Userbin Ruby gem](https://github.com/userbin/userbin-ruby) on Github for more details on how to work with Userbin in your Rails application.
 
 
