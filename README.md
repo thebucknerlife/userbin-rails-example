@@ -44,16 +44,16 @@ Deploy to Heroku
     $ heroku addons:add userbin
     ```
 
-1. Setup database
-
-    ```bash
-    $ heroku run rake db:setup
-    ```
-
 1. Deploy
 
     ```bash
     $ git push heroku master
+    ```
+
+1. Setup database
+
+    ```bash
+    $ heroku run rake db:migrate
     ```
 
 1. Open the app in your browser:

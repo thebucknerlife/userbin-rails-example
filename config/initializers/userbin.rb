@@ -1,6 +1,9 @@
 Userbin.configure do |config|
-  config.app_id = "YOUR_APP_ID"
-  config.api_secret = "YOUR_API_SECRET"
+
+  # Uncomment these lines to set your app ID and API secret.
+  # If they are not set they will be read from ENV
+  # config.app_id = "YOUR_APP_ID"
+  # config.api_secret = "YOUR_API_SECRET"
 
   config.root_path = "/"
   config.protected_path = "/account"
