@@ -8,19 +8,31 @@ Userbin for Ruby adds user authentication, login flows and user management to yo
 [Create a free account](https://userbin.com) at Userbin to start accepting users in your application.
 
 
-Configuration for non-Heroku
-----------------------------
+Installation
+------------
 
-Change the following code in `config/initializers/userbin.rb` to include the credentials you got from signing up.
+1. Clone the repo
 
-```ruby
-Userbin.configure do |config|
-  config.app_id = "YOUR_APP_ID"
-  config.api_secret = "YOUR_API_SECRET"
-end
-```
+    ```bash
+    $ git clone git@github.com:userbin/userbin-rails-boilerplate.git
+    ```
 
-If you don't configure the `app_id` and `api_secret`, the Userbin module will read the `USERBIN_APP_ID` and `USERBIN_API_SECRET` environment variables. This may come in handy on Heroku.
+1. Change the following code in `config/initializers/userbin.rb` to include the credentials you got from signing up.
+
+    ```ruby
+    Userbin.configure do |config|
+      config.app_id = "YOUR_APP_ID"
+      config.api_secret = "YOUR_API_SECRET"
+    end
+    ```
+
+    If you don't configure the `app_id` and `api_secret`, the Userbin module will read the `USERBIN_APP_ID` and `USERBIN_API_SECRET` environment variables. This may come in handy on Heroku.
+
+1. Migrate the database to setup the users table
+ 
+    ```bash
+    $ rake db:migrate
+    ```
 
 
 Deploy to Heroku
