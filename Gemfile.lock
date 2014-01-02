@@ -112,7 +112,7 @@ GEM
     uglifier (2.3.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    userbin (0.3.5)
+    userbin (0.4.2)
       her (~> 0.6.8)
       multi_json (~> 1.0)
 
