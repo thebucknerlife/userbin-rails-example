@@ -1,5 +1,6 @@
 Rails + Userbin boilerplate
 ======================================
+[![Dependency Status](https://gemnasium.com/userbin/userbin-rails-example.png)](https://gemnasium.com/userbin/userbin-rails-example)
 
 Userbin for Ruby adds user authentication, login flows and user management to your **Rails**, **Sinatra** or **Rack** app.
 
@@ -29,7 +30,7 @@ Installation
     If you don't configure the `app_id` and `api_secret`, the Userbin module will read the `USERBIN_APP_ID` and `USERBIN_API_SECRET` environment variables. This may come in handy on Heroku.
 
 1. Migrate the database to setup the users table
- 
+
     ```bash
     $ rake db:migrate
     ```
