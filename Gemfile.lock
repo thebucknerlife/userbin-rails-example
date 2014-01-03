@@ -122,5 +122,5 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
-  uglifier (>= 2.3.0)
+  uglifier (>= 2.4.0)
   userbin
