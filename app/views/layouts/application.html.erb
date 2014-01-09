@@ -39,11 +39,11 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= Userbin.current_user.email %> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to 'My Account', account_path %></li>
-                  <li><a href="#" class="ub-logout">Log out</a></li>
+                  <li><a href="/" class="ub-logout">Log out</a></li>
                 </ul>
               </li>
             <% else %>
-              <li><a href="#contact" class="ub-login">Log in</a></li>
+              <li><a href="/account" class="ub-login">Log in</a></li>
             <% end %>
           </ul>
         </div><!--/.nav-collapse -->
